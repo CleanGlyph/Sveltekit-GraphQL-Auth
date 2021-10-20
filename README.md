@@ -1,10 +1,11 @@
 # Boiler Plate Sveltekit GraphQL Bearer Auth
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Everything you need to build a Svelte + GraphQL project with a Bearer Token Auth. 
-Powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+
 
 ### Based off of [Rodeny's Work](https://rodneylab.com/use-apollo-client-sveltekit/) 
-Literally anything interesting sveltekit related he has solid content on, check him out and support him!
+Literally anything interesting sveltekit related he has solid content on, check him out throw some support his way!
 
 ## Install
 

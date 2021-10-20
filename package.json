@@ -1,23 +1,29 @@
 {
-  "name": "sveltekit-graphql-auth",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "env-cmd svelte-kit dev -p 3000",
-    "build": "env-cmd svelte-kit build",
-    "preview": "svelte-kit preview -p 3000"
-  },
-  "devDependencies": {
-    "@apollo/client": "^3.4.15",
-    "@sveltejs/kit": "next",
-    "env-cmd": "^10.1.0",
-    "graphql": "^15.6.0",
-    "svelte": "^3.42.6"
-  },
-  "type": "module",
-  "dependencies": {
-    "cookie": "^0.4.1",
-    "jwt-decode": "^3.1.2",
-    "node-fetch": "^3.0.0",
-    "rollup-plugin-invariant": "^0.9.2"
-  }
+	"name": "sveltekit-graphql-auth",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "env-cmd svelte-kit dev -p 3000",
+		"build": "env-cmd svelte-kit build",
+		"preview": "svelte-kit preview -p 3000"
+	},
+	"devDependencies": {
+		"@apollo/client": "^3.4.15",
+		"@sveltejs/kit": "next",
+		"env-cmd": "^10.1.0",
+		"graphql": "^15.6.0",
+		"svelte": "^3.42.6",
+		"postcss": "^8.3.8",
+		"postcss-load-config": "^3.1.0",
+		"svelte-preprocess": "^4.9.5",
+		"autoprefixer": "^10.3.6",
+		"cssnano": "^5.0.8",
+		"tailwindcss": "^2.2.16"
+	},
+	"type": "module",
+	"dependencies": {
+		"cookie": "^0.4.1",
+		"jwt-decode": "^3.1.2",
+		"node-fetch": "^3.0.0",
+		"rollup-plugin-invariant": "^0.9.2"
+	}
 }
