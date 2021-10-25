@@ -4,7 +4,7 @@ import { respond } from '$lib/utilities/_respond.js'
 
 /*
 	Very stupid endpoint please change/remove!!
-	This is just to have it be a quick set up on the back end to get testing private data out of the database.
+	This is just to have a quick set up to show you can get 'private' data out of the database.
  */
 export async function get ({ locals }) {
   try {
