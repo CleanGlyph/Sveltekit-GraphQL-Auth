@@ -1,6 +1,9 @@
 {
 	"name": "sveltekit-graphql-auth",
 	"version": "0.0.1",
+	"license" : "See license in 'LICENSE'",
+	"author": "Liz <www.github.com/CleanGlyph>",
+	"description": "Template of handling Bearer Tokens with GraphQL & Sveltekit using Tailwind CSS.",
 	"scripts": {
 		"dev": "env-cmd svelte-kit dev -p 3000",
 		"build": "env-cmd svelte-kit build",

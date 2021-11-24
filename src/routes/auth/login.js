@@ -1,8 +1,8 @@
 
-import { ApolloClient, gql } from '@apollo/client/core'
-import { HttpLink } from '@apollo/client/link/http'
-import { InMemoryCache } from '@apollo/client/cache/'
-import { respond } from '$lib/utilities/_respond'
+import { ApolloClient, gql } from '@apollo/client/core';
+import { HttpLink } from '@apollo/client/link/http';
+import { InMemoryCache } from '@apollo/client/cache/';
+import { respond } from '$lib/utilities/_respond';
 
 export async function post (request) {
   try {
