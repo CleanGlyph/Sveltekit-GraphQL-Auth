@@ -5,7 +5,7 @@ const config = {
   kit: {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
-    vite: {  
+    vite: {
       optimizeDeps: {
         include: [
           '@apollo/client/core',
@@ -16,8 +16,8 @@ const config = {
           '@apollo/client/utilities'
         ],
         exclude: ['@apollo/client']
-    },
-  }
+      }
+    }
   },
 
   preprocess: [preprocess({

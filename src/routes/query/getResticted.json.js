@@ -1,4 +1,4 @@
-import { client } from '$lib/utilities/apolloClient.js'
+import { Client } from '$lib/utilities/apolloClient.js'
 import { gql } from '@apollo/client/core/'
 /*
 	Very stupid endpoint please change/remove!!
@@ -14,7 +14,7 @@ export async function get ({ locals }) {
             }
           }
 		`
-    const connection = new client(locals.user.token).client
+    const connection = new Client(locals.user.token).client
     const { data } = await connection.query({
       query,
       variables: { usersWhere }
@@ -28,6 +28,6 @@ export async function get ({ locals }) {
       status: 500,
       error_detail: err
     }
-    return { status: 401, body:{ error: errors } };
+    return { status: 401, body: { error: errors } }
   };
 }

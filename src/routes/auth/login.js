@@ -38,6 +38,6 @@ export async function post (request) {
       error_detail: err
     }
 
-    return { status: 401, body:{ error: errors } };
+    return { status: 401, body: { error: errors } }
   };
 }

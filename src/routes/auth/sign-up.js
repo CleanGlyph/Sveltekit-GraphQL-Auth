@@ -1,8 +1,8 @@
 
-  import { ApolloClient, gql } from '@apollo/client/core'
+import { ApolloClient, gql } from '@apollo/client/core'
 import { HttpLink } from '@apollo/client/link/http'
 import { InMemoryCache } from '@apollo/client/cache/'
-import jwt_decode from 'jwt-decode'
+import jwtDecode from 'jwt-decode'
 
 export async function post (request) {
   try {
@@ -32,17 +32,17 @@ export async function post (request) {
     })
 
     if (body.error) {
-        return { status: 401, body }
-      }
-   
-      const json = JSON.stringify(body.data.signUp)
-      const decodedUser = jwt_decode(json)
-      return {
-        headers: {
-          'set-cookie': `jwt=${json}; Path=/; HttpOnly`
-        },
-        body: decodedUser
-      }
+      return { status: 401, body }
+    }
+
+    const json = JSON.stringify(body.data.signUp)
+    const decodedUser = jwtDecode(json)
+    return {
+      headers: {
+        'set-cookie': `jwt=${json}; Path=/; HttpOnly`
+      },
+      body: decodedUser
+    }
   } catch (err) {
     console.log(err)
     const errors = {
@@ -50,6 +50,6 @@ export async function post (request) {
       error_detail: err
     }
 
-    return { status: 401, body:{ error: errors } };
+    return { status: 401, body: { error: errors } }
   };
 }

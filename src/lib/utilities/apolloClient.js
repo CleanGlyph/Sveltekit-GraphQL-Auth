@@ -1,13 +1,12 @@
 
-import { ApolloClient } from '@apollo/client/core';
-import { HttpLink } from '@apollo/client/link/http';
-import { InMemoryCache } from '@apollo/client/cache';
-import { setContext } from '@apollo/client/link/context';
+import { ApolloClient } from '@apollo/client/core'
+import { HttpLink } from '@apollo/client/link/http'
+import { InMemoryCache } from '@apollo/client/cache'
+import { setContext } from '@apollo/client/link/context'
 
 class Client {
   constructor (token) {
-    if (Client._instance) {
-    }
+    
     Client._instance = this
     this.client = this.setupClient(token)
   }
