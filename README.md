@@ -3,9 +3,8 @@
 
 Everything you need to build a Svelte + GraphQL project with a Bearer Token Auth. 
 
+Based off of [Rodeny's Work](https://rodneylab.com/use-apollo-client-sveltekit/) 
 
-### Based off of [Rodeny's Work](https://rodneylab.com/use-apollo-client-sveltekit/) 
-Literally anything interesting sveltekit related he has solid content on, check him out throw some support his way!
 
 ## Install
 
@@ -16,9 +15,7 @@ npm install
 
 ## Developing
 
-**NOTE: Known issue  when there are GraphQL errors the module that catches them in rollup.js dev is ignored so the error returned is 'module missing' or equvielents.(Or I assume thats what origin of the issue is, so combination of build/preview and dev are needed to debug GraphQL issues.)**
-
-Otherwise use the following to open it in hot reload dev mode:
+Use the following to open it in hot reload:
 ```bash
 npm run dev
 
@@ -39,6 +36,8 @@ npm run build
 
 
 ## API Refrence
+
+[Node Neo4j GraphQL Stub Server with Auth](https://github.com/CleanGlyph/node-Neo4jGraphQL-Auth)
 
 Using a Neo4j-GraphQL-Boilerplate, with the following definitions
 ``` JS
