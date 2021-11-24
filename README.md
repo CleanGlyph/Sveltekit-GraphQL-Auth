@@ -8,10 +8,22 @@ Based off of [Rodeny's Work](https://rodneylab.com/use-apollo-client-sveltekit/)
 
 ## Install
 
+### 1. NPM install
 ```bash
 # create a new project in the current directory
 npm install
 ```
+
+### 2. Add a .env
+
+Can use the VITE imports but I used `env-cmd` package to make it.
+
+```bash
+VITE_GRAPHQL_ENDPOINT=http://localhost:4000/
+```
+### 3. Run it
+
+Use the commands bellow to run in dev or production
 
 ## Developing
 
