@@ -67,13 +67,13 @@
 
 <div class="flex h-screen justify-center items-center ">
 	<div class="grid-col-1 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
-		<div class="flex items-center mb-6">
-			<h1 class="text-4xl flex-1 text-right" >Settings for:&#32</h1>
-			<span class="text-gray-700 flex-1 text-3xl justify-self">  {$session.user.username}</span>
-		</div>
+	
+			<h1 class="text-4xl flex-1 mb-6" >Settings for:&#32 <span class="text-gray-700 flex-1 text-3xl justify-self">  {$session.user.username}</span></h1>
+			
+		
 		<div class="flex gap-2">
-			<button on:click={restrictedContent} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Restricted Content to Console.Log</button>
-			<button on:click={logout} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Logout</button>
+			<button on:click={restrictedContent} class="bg-blue-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-full">Restricted Content to Console.Log</button>
+			<button on:click={logout} class="bg-blue-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full">Logout</button>
 		</div>
 	</div>
 

@@ -35,19 +35,18 @@
     <title>Insecure Secure Page</title>
 </svelte:head>
 <div class="flex h-screen justify-center items-center ">
-    <div class="grid-col-1 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 ">
+    <div class="grid-col-1 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-lg">
         <div class="flex items-center mb-6">
             <h1 class="text-2xl flex-1 text-center">
-                Wow so you just showing passwords for a boiler plate
+               Showing this user's password for an example of dumb ways to show case ristricted pages
             </h1>
         </div>
         {#await promise}
-            <p >well.....</p>
+            <p >one sec figuring it out.....</p>
         {:then data}
-            <p>
-                yea I assume you'll change {data.password} for your actual
-                use case, or be using demo users to test your backend as your setting
-                this up.
+            <p class="break-all">
+                Cause <span class="font-semibold">I assume you'll change this:</span> <span class=" font-bold text-yellow-500">{data.password}</span> unless your just starting to use the neo4j template aswell and haven't seen this far yet
+                use case if your using the neo4j template aswell 
             </p>
         {:catch error}
   

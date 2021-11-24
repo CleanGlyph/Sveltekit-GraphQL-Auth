@@ -5,6 +5,8 @@ export function respond (body) {
   }
   const json = JSON.stringify(body.signIn)
   const decodedUser = jwt_decode(json)
+  //Add better security settings for cookies production here
+  //make sure to have good CORS settings
   return {
     headers: {
       'set-cookie': `jwt=${json}; Path=/; HttpOnly`

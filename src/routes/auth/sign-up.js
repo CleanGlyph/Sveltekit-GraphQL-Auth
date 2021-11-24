@@ -1,8 +1,8 @@
 
-import { ApolloClient, gql } from '@apollo/client/core'
+  import { ApolloClient, gql } from '@apollo/client/core'
 import { HttpLink } from '@apollo/client/link/http'
 import { InMemoryCache } from '@apollo/client/cache/'
-import { respond } from '$lib/utilities/_respond'
+import jwt_decode from 'jwt-decode'
 
 export async function post (request) {
   try {
@@ -22,17 +22,29 @@ export async function post (request) {
 
     const { username, password } = request.body
     const query = gql`
-		mutation SignInMutation($username: String!, $password: String!) {
-			signIn(username: $username, password: $password)
-		  }
+    mutation SignUp($username: String!, $password: String!) {
+        signUp(username: $username, password: $password)
+      }
 		`
     const body = await client.mutate({
       mutation: query,
       variables: { username, password }
     })
 
-    return respond(body.data)
+    if (body.error) {
+        return { status: 401, body }
+      }
+   
+      const json = JSON.stringify(body.data.signUp)
+      const decodedUser = jwt_decode(json)
+      return {
+        headers: {
+          'set-cookie': `jwt=${json}; Path=/; HttpOnly`
+        },
+        body: decodedUser
+      }
   } catch (err) {
+    console.log(err)
     const errors = {
       status: 500,
       error_detail: err

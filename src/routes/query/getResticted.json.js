@@ -1,7 +1,5 @@
 import { client } from '$lib/utilities/apolloClient.js'
-import { gql } from '@apollo/client/core/core.cjs.js'
-import { respond } from '$lib/utilities/_respond.js'
-
+import { gql } from '@apollo/client/core/'
 /*
 	Very stupid endpoint please change/remove!!
 	This is just to have a quick set up to show you can get 'private' data out of the database.
@@ -30,6 +28,6 @@ export async function get ({ locals }) {
       status: 500,
       error_detail: err
     }
-    return respond({ error: errors })
+    return { status: 401, body:{ error: errors } };
   };
 }
