@@ -49,9 +49,7 @@ npm run build
 
 ## API Refrence
 
-[Node Neo4j GraphQL Stub Server with Auth](https://github.com/CleanGlyph/node-Neo4jGraphQL-Auth)
-
-Using a Neo4j-GraphQL-Boilerplate, with the following definitions
+Using a [Neo4j-GraphQL-Boilerplate](https://github.com/CleanGlyph/node-Neo4jGraphQL-Auth), with the following definitions
 ``` JS
 const typeDefs = `
    type User @exclude(operations: [CREATE, DELETE]) {
