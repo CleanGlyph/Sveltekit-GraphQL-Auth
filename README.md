@@ -1,10 +1,16 @@
+
+# This is old, and pre-sveltekit 1.0!!!
+It *should* work after migration, I'll update ASAP if someone really wants it to be honest just put in an Issue 
+
+# [Houdini](https://github.com/houdinigraphql/houdini) does this better with stores and with auth, however if you wanted something thinner and do all that coding yourself this is that.
+
+
 # Boiler Plate Sveltekit GraphQL Bearer Auth
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Everything you need to build a Svelte + GraphQL project with a Bearer Token Auth. 
 
 Based off of [Rodeny's Work](https://rodneylab.com/use-apollo-client-sveltekit/) 
-
 
 ## Install
 
